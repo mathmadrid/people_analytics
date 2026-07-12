@@ -135,7 +135,7 @@ Todos os **40 testes** foram executados com sucesso:
 - ✔️ PASS = **40**
 - ❌ FAIL = **0**
 
-![Resultado dos Testes dbt](images/pleo2.PNG)
+![Resultado dos Testes dbt](images/people2.PNG)
 
 ## Próximos Passos & Roadmap de Evolução
 
