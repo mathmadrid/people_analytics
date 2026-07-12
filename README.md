@@ -114,6 +114,29 @@ DimLocation, DimCostCenter e DimAbsenceType -> FactAbsenteeism
 - Carga transacional e inserções em lotes via SQLAlchemy/Pandas.
 - Testes dbt `unique`, `not_null`, `relationships`, `accepted_values` e teste singular de vigência SCD.
 
+## Documentação Visual e Validação
+
+Para facilitar o entendimento da arquitetura do projeto e garantir a transparência da qualidade dos dados, seguem os principais artefatos visuais.
+
+### Diagrama de Linhagem de Dados (dbt Lineage)
+
+O diagrama abaixo apresenta o fluxo completo dos dados, desde as tabelas de origem (raw) até as tabelas analíticas finais, demonstrando as transformações realizadas pelo dbt para a construção dos modelos **`fact_absenteeism`** e **`fact_headcount`**.
+
+![Diagrama de Linhagem](people1.PNG)
+
+---
+
+### Validação e Testes de Qualidade
+
+A imagem abaixo apresenta a execução dos testes do dbt, validando a integridade, consistência e qualidade dos dados do projeto.
+
+Todos os **40 testes** foram executados com sucesso:
+
+- ✔️ PASS = **40**
+- ❌ FAIL = **0**
+
+![Resultado dos Testes dbt](people2.PNG)
+
 ## 🗺️ Próximos Passos & Roadmap de Evolução
 
 O projeto foi estruturado para ser incremental. As seguintes evoluções estão planejadas para as próximas sprints:
