@@ -78,6 +78,7 @@ As consultas de validação analítica estão organizadas e estruturadas na past
     *   `queries/mov_monthly_terminations.sql`: Histórico mensal de desligamentos/demissões.
     *   `queries/mov_turnover_validation.sql`: Taxa de turnover calculada para o último mês disponível.
 *   **Absenteísmo (`abs_`)**:
+    *   `queries/abs_reasons_and_hours.sql`: Total de horas perdidas, ocorrências e média por tipo de falta.
     *   `queries/abs_global_rate.sql`: Cálculo da taxa de absenteísmo global histórica da organização.
 
 Para checagens rápidas diretamente via terminal interativo dentro do container, utilize o comando:
