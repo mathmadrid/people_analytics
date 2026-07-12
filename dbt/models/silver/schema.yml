@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: sl_departments
+    columns:
+      - name: department_id
+        tests: [unique, not_null]
+      - name: cost_center_id
+        tests:
+          - relationships: {to: ref('sl_cost_centers'), field: cost_center_id}
+  - name: sl_positions
+    columns:
+      - name: position_id
+        tests: [unique, not_null]
+      - name: employment_type
+        tests: [{accepted_values: {values: ['Clt']} }]
+  - name: sl_employees_scd
+    columns:
+      - name: employee_sk
+        tests: [unique, not_null]
+      - name: employee_id
+        tests: [not_null]
+      - name: gender
+        tests: [{accepted_values: {values: ['Female', 'Male']} }]
+  - name: sl_absences
+    columns:
+      - name: absence_sk
+        tests: [unique, not_null]
+      - name: absence_type
+        tests: [{accepted_values: {values: ['Vacation', 'Medical Leave', 'Work Accident']} }]
+

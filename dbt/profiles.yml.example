@@ -1,0 +1,17 @@
+people_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: people_admin
+      password: people_admin_change_me
+      dbname: people_analytics
+      schema: public
+      threads: 4
+      connect_timeout: 10
+      quoting:
+        database: false
+        schema: false
+        identifier: true

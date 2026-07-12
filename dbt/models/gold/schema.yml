@@ -1,0 +1,47 @@
+version: 2
+models:
+  - name: dim_date
+    config: {alias: DimDate}
+    columns: [{name: date_sk, tests: [unique, not_null]}]
+  - name: dim_employee
+    config: {alias: DimEmployee}
+    columns: [{name: employee_sk, tests: [unique, not_null]}]
+  - name: dim_department
+    config: {alias: DimDepartment}
+    columns: [{name: department_sk, tests: [unique, not_null]}]
+  - name: dim_position
+    config: {alias: DimPosition}
+    columns: [{name: position_sk, tests: [unique, not_null]}]
+  - name: dim_manager
+    config: {alias: DimManager}
+    columns: [{name: manager_sk, tests: [unique, not_null]}]
+  - name: dim_location
+    config: {alias: DimLocation}
+    columns: [{name: location_sk, tests: [unique, not_null]}]
+  - name: dim_cost_center
+    config: {alias: DimCostCenter}
+    columns: [{name: cost_center_sk, tests: [unique, not_null]}]
+  - name: dim_employment_type
+    config: {alias: DimEmploymentType}
+    columns: [{name: employment_type_sk, tests: [unique, not_null]}]
+  - name: dim_gender
+    config: {alias: DimGender}
+    columns: [{name: gender_sk, tests: [unique, not_null]}]
+  - name: dim_absence_type
+    config: {alias: DimAbsenceType}
+    columns: [{name: absence_type_sk, tests: [unique, not_null]}]
+  - name: fact_headcount
+    config: {alias: FactHeadcount}
+    columns:
+      - name: headcount_sk
+        tests: [unique, not_null]
+      - name: employee_sk
+        tests: [{relationships: {to: ref('dim_employee'), field: employee_sk}}]
+  - name: fact_absenteeism
+    config: {alias: FactAbsenteeism}
+    columns:
+      - name: absenteeism_sk
+        tests: [unique, not_null]
+      - name: date_sk
+        tests: [{relationships: {to: ref('dim_date'), field: date_sk}}]
+

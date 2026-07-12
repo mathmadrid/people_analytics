@@ -1,0 +1,15 @@
+version: 2
+sources:
+  - name: hr_erp
+    schema: bronze
+    description: Dados brutos gerados pelo simulador de ERP de RH.
+    tables:
+      - name: employees
+      - name: employment_history
+      - name: departments
+      - name: positions
+      - name: managers
+      - name: locations
+      - name: cost_centers
+      - name: absences
+

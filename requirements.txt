@@ -1,0 +1,8 @@
+Faker==37.6.0
+pandas==2.3.1
+SQLAlchemy==2.0.43
+psycopg2-binary==2.9.10
+python-dotenv==1.1.1
+dbt-core==1.10.3
+dbt-postgres==1.9.0
+
