@@ -122,7 +122,7 @@ Para facilitar o entendimento da arquitetura do projeto e garantir a transparên
 
 O diagrama abaixo apresenta o fluxo completo dos dados, desde as tabelas de origem (raw) até as tabelas analíticas finais, demonstrando as transformações realizadas pelo dbt para a construção dos modelos **`fact_absenteeism`** e **`fact_headcount`**.
 
-![Diagrama de Linhagem](people1.PNG)
+![Diagrama de Linhagem](images/people1.PNG)
 
 ---
 
@@ -135,9 +135,9 @@ Todos os **40 testes** foram executados com sucesso:
 - ✔️ PASS = **40**
 - ❌ FAIL = **0**
 
-![Resultado dos Testes dbt](people2.PNG)
+![Resultado dos Testes dbt](images/pleo2.PNG)
 
-## 🗺️ Próximos Passos & Roadmap de Evolução
+## Próximos Passos & Roadmap de Evolução
 
 O projeto foi estruturado para ser incremental. As seguintes evoluções estão planejadas para as próximas sprints:
 
